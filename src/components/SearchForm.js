@@ -26,6 +26,9 @@ export default function SearchForm(props) {
           type="text"
           placeholder="rick 🔍"
           />
+          <input
+            type="submit"
+          />
         </form>
       </label>
     </section>

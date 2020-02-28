@@ -7,6 +7,12 @@ import SearchForm from "./SearchForm"
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
+
+  const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  `
+
 const [characters, setCharacters] = useState([])
 
 
@@ -33,6 +39,7 @@ const [characters, setCharacters] = useState([])
   return (
     <section className="character-list">
       <SearchForm handleSearch={handleSearch} characters={characters} />
+      <Container>
       {characters.map(character => (
         <CharacterCard
         key={character.id}
@@ -41,6 +48,7 @@ const [characters, setCharacters] = useState([])
         image={character.image}
         />
       ))}
+      </Container>
     </section>
   );
 }
